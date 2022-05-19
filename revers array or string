@@ -29,8 +29,20 @@ arr = [1, 2, 3, 4, 5]
 # 5. 
 arr = [1, 2, 3, 4, 5]
 [print (i, end=" ") for i in reversed(arr)]
-
-
+##################################
+# 6.
+arr = [11, 22, 33, 44, 55]
+print("Before reversal Array is :",arr)
+ 
+arr.reverse() #reversing using reverse()
+print("After reversing Array:",arr)
+####################
+# 7.
+arr = [12, 34, 56, 78]
+print("Original Array is :",arr)
+#reversing using reversed()
+result=list(reversed(arr))
+print("Resultant new reversed Array:",result)
 
 ++++++++++++++++++++++++++++++++++
 
@@ -64,26 +76,6 @@ mytxt = my_function("I wonder how this text looks like backwards")
 print(mytxt )
 ####################
 # 5.
-arr = [11, 22, 33, 44, 55]
-print("Before reversal Array is :",arr)
- 
-arr.reverse() #reversing using reverse()
-print("After reversing Array:",arr)
-####################
-# 6.
-arr = [12, 34, 56, 78]
-print("Original Array is :",arr)
-#reversing using reversed()
-result=list(reversed(arr))
-print("Resultant new reversed Array:",result)
-####################
-# 7.
-s="Python" # initial string
-stringlength=len(s) # calculate length of the list
-slicedString=s[stringlength::-1] # slicing 
-print (slicedString) # print the reversed string
-####################
-# 8.
 s = "Python" # initial string
 reversedString=[]
 index = len(s) # calculate length of string and save in index
@@ -92,12 +84,12 @@ while index > 0:
     index = index - 1 # decrement index
 print(reversedString) # reversed string
 ####################
-# 9.
+# 6.
 s = 'Python' #initial string
 reversed=''.join(reversed(s)) # .join() method merges all of the characters resulting from the reversed iteration into a new string
 print(reversed) #print the reversed string
 ####################
-# 10.
+# 7.
 def reverse_string(string):
 	if len(string) == 0:
 		return string

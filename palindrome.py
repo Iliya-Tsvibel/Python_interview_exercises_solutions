@@ -1,6 +1,14 @@
+def is_pal(a)
+    for n in range(len(a) // 2):
+        if a[n] != a[len(a) - n - 1]:
+            return False
+    return True
+
+is_pal("abcba")
+
+
 # 1.
-a = "Pop"
-b = a.lower()
+a = "abcba"
 c = a[::-1]
 if a == c:
     print("the word", a, "is palindrome")

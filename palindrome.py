@@ -1,5 +1,24 @@
 # 1.
 #Read about Big O notation: https://en.wikipedia.org/wiki/Big_O_notation
+#Good article: https://javascript.plainenglish.io/the-best-and-worst-way-of-solving-the-palindrome-question-4b7d2f9ada06
+#Additional explanation: https://stackoverflow.com/questions/24153433/complexity-of-palindrome-test
+#Examples on JS: https://learnersbucket.com/examples/algorithms/palindrome-string/
+#IA normal list :
+
+# Append : O(1)
+# Extend : O(k) - k is the length of the extension
+# Index : O(1)
+# Slice : O(k)
+# Sort : O(n log n) - n is the length of the list
+# Len : O(1)
+# Pop : O(1) - pop from end
+# Insert : O(n) - n is the length of the list
+# Del : O(n) - n is the length of the list
+# In : O(n) - n is the length of the list
+# + : O(m + n) - m & n are the length of the lists - this creates a new list object
+# += : O(n) - n is the length of the list being added - list is extended.
+
+
 #This first solution optimized for CPU, unlike subsequent additional solutions.
 def is_pal(a):
     for n in range(len(a) // 2):

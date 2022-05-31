@@ -70,4 +70,5 @@ def Compare(opening, closing):
         return True  
     return False
 
-print(BalancedBrackets("{rr(4t[.opanki])}"))
+Str = input("Enter a string of brackets:")
+print(BalancedBrackets(Str))

@@ -88,3 +88,5 @@ res = convert_to_words(input("Enter number up to 4 digits:"))
 
 print res()
 ##############################################
+#3.
+#Additional solution: https://ao.ms/how-to-write-out-numbers-in-python/

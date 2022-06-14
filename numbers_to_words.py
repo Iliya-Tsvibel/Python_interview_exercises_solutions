@@ -1,55 +1,61 @@
-#1.
-arr = ['zero','one','two','three','four','five','six','seven','eight','nine']
+# 1.
+arr = ['zero', 'one', 'two', 'three', 'four',
+    'five', 'six', 'seven', 'eight', 'nine']
+
+
 def number_to_word(n):
-    if(n==0):
+    if(n == 0):
         return ''
-     
+
     else:
-        words_from_arr = arr[n%10]
+        words_from_arr = arr[n % 10]
         res = number_to_word(int(n/10)) + words_from_arr + " "
-        
+
     return res
- 
+
+
 n = int(input("Enter number in any range:"))
 print("Entered number is : ", n)
-print("Number in words: ",end="")
+print("Number in words: ", end="")
 print(number_to_word(n))
 ###########################################
-#2.
-#Explanation here: https://www.geeksforgeeks.org/convert-number-to-words/
+# 2.
+# Explanation here: https://www.geeksforgeeks.org/convert-number-to-words/
+
+
 def convert_to_words(num):
-    
+
     l = len(num)
- 
+
     if (l == 0):
         print("empty string")
         return
- 
+
     if (l > 4):
         print("Length more than 4 is not supported")
         return
- 
+
     single_digits = ["zero", "one", "two", "three",
                      "four", "five", "six", "seven",
                      "eight", "nine"]
- 
+
     two_digits = ["", "ten", "eleven", "twelve",
                   "thirteen", "fourteen", "fifteen",
                   "sixteen", "seventeen", "eighteen",
                   "nineteen"]
- 
+
     tens_multiple = ["", "", "twenty", "thirty", "forty",
                      "fifty", "sixty", "seventy", "eighty",
                      "ninety"]
- 
+
     tens_power = ["hundred", "thousand"]
- 
+
     print(num, ":", end=" ")
-    
+
     if (l == 1):
         print(single_digits[ord(num[0]) - 48])
         return
- 
+
     x = 0
     while (x < len(num)):
          if (l >= 3):
@@ -59,7 +65,7 @@ def convert_to_words(num):
                 print(tens_power[l - 3], end=" ")
 
             l -= 1
- 
+
         else:
  
              if (ord(num[x]) - 48 == 1):
@@ -73,7 +79,7 @@ def convert_to_words(num):
                 print("twenty")
                 return
  
-            else:
+        else:
                 i = ord(num[x]) - 48
                 if(i > 0):
                     print(tens_multiple[i], end=" ")
@@ -88,6 +94,5 @@ res = convert_to_words(input("Enter number up to 4 digits:"))
 
 print res()
 ##############################################
-#3.
-#Additional solution: https://ao.ms/how-to-write-out-numbers-in-python/
-#test
+# 3.
+# Additional solution: https://ao.ms/how-to-write-out-numbers-in-python/
